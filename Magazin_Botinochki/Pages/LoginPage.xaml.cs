@@ -42,5 +42,13 @@ namespace Magazin_Botinochki.Pages
 
             Console.WriteLine($"шутк: {joke.setup} - {joke.punchline}");
         }
+
+        private void Txb_Login_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                Psb_pass.Focus();
+            }
+        }
     }
 }

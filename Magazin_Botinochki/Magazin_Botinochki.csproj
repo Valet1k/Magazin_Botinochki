@@ -108,6 +108,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PageAdmin\AdminAddTovarPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageAdmin\AdminViewTovar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PageManager\ManagerViewTovarPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -120,6 +128,12 @@
   <ItemGroup>
     <Compile Include="Pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageAdmin\AdminAddTovarPage.xaml.cs">
+      <DependentUpon>AdminAddTovarPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageAdmin\AdminViewTovar.xaml.cs">
+      <DependentUpon>AdminViewTovar.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageManager\ManagerViewTovarPage.xaml.cs">
       <DependentUpon>ManagerViewTovarPage.xaml</DependentUpon>
@@ -153,9 +167,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Pages\PageAdmin\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="test_images\1.jpg" />
     <Resource Include="test_images\2.jpg" />

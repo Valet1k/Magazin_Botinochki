@@ -24,5 +24,20 @@ namespace Magazin_Botinochki.Pages.PageAdmin
         {
             InitializeComponent();
         }
+
+        private void Btn_Edit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Btn_Delete_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Btn_close_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

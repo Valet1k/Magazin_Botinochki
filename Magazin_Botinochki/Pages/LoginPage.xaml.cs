@@ -24,10 +24,12 @@ namespace Magazin_Botinochki.Pages
         private ApiClient.ApiClient _apiClient;
         public LoginPage()
         {
-            ApiClient.ApiClient apiClient = new ApiClient.ApiClient("https://official-joke-api.appspot.com");
+            ApiClient.ApiClient apiClient = new ApiClient.ApiClient("https://localhost:7174");
             _apiClient = apiClient;
             InitializeComponent();
         }
+
+       
 
         private async void Btn_vxod_Click(object sender, RoutedEventArgs e)
         {
@@ -37,10 +39,25 @@ namespace Magazin_Botinochki.Pages
                 return;
             }
 
+            LoginUser loginuser = new LoginUser
+            {
+                Login = Txb_Login.Text,
+                Password = Psb_pass.Password,
+            };
 
-            var joke = await _apiClient.Get<Jokes>("jokes/random");
+            UserModels user = await _apiClient.Post<UserModels>("User/login",loginuser);
 
-            Console.WriteLine($"шутк: {joke.setup} - {joke.punchline}");
+            if (user == null )
+            {
+                MessageBox.Show("Такого пользователя не существует!");
+                return;
+            }
+
+            if(user.UserRoleId == 1)
+            {
+
+            }
+        
         }
 
         private void Txb_Login_KeyDown(object sender, KeyEventArgs e)

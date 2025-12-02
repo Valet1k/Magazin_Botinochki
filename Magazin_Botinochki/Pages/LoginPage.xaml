@@ -26,8 +26,8 @@
                 <TextBox
                     x:Name="Txb_Login"
                     Width="155"
-                    KeyDown="Txb_Login_KeyDown"
-                    Margin="5" />
+                    Margin="5"
+                    KeyDown="Txb_Login_KeyDown" />
             </StackPanel>
 
 

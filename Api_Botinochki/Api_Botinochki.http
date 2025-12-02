@@ -1,0 +1,6 @@
+@Api_Botinochki_HostAddress = http://localhost:5107
+
+GET {{Api_Botinochki_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
